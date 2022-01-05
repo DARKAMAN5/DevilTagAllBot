@@ -21,11 +21,13 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**'✨ 𝑰 𝑨𝑴 𝑻𝑨𝑮𝑨𝑳𝑳 𝑩𝑶𝑻**, 𝑰 𝑪𝑨𝑵 𝑴𝑬𝑵𝑻𝑰𝑶𝑵 𝑨𝑳𝑳 𝑴𝑬𝑴𝑩𝑬𝑹𝑺 𝑰𝑵 𝑮𝑹𝑶𝑼𝑷 🤑\n𝑪𝑳𝑰𝑪𝑲 **/help** 𝑭𝑶𝑹 𝑴𝑶𝑹𝑬 𝑰𝑵𝑭𝑶𝑹𝑴𝑨𝑻𝑰𝑶𝑵__\n\n 𝑱𝑶𝑰𝑵 [✨𝑹𝑶𝒀𝑨𝑳 𝑺𝑼𝑷𝑷𝑶𝑹𝑻✨](https://t.me/DARKAMANSUPPORT)",
+    "__**'✨ 𝐈 𝐀ᴍ 𝐓ᴀɢ 𝐀ʟʟ 𝐁ᴏᴛ,** 𝐈 𝐂ᴀɴ 𝐌ᴇɴᴛɪᴏɴ 𝐀ʟʟ 𝐌ᴇᴍʙᴇʀs 𝐈ɴ 𝐆ʀᴏᴜᴘ\n💫𝐂ʟɪᴄᴋ **/help** 𝐅ᴏʀ 𝐌ᴏʀᴇ 𝐈ɴғᴏʀᴍᴀᴛɪᴏɴ💫__\n\n🇮🇳 𝐉ᴏɪɴ ☞︎︎︎ [✨𝑹𝑶𝒀𝑨𝑳 𝑺𝑼𝑷𝑷𝑶𝑹𝑻✨](https://t.me/DARKAMANSUPPORT)",
     link_preview=False,
     buttons=(
       [
-        Button.url('🇦𝐃𝐃 𝐌𝐄𝐍𝐓𝐈𝐎𝐍 𝐁𝐎𝐓', 'https://t.me/MENTIONXROBOT'),
+        Button.url('🇦𝐃𝐃 𝐌𝐄𝐍𝐓𝐈𝐎𝐍 𝐁𝐎𝐓', 'https://t.me/MENTIONXROBOT?startgroup=true'),
+      ]
+      [
         Button.url('🇨𝐇𝐀𝐍𝐍𝐄𝐋', 'https://t.me/DARKAMANCHANNEL'),
         Button.url('🇸𝐔𝐏𝐏𝐎𝐑𝐓', 'https://t.me/DARKAMANSUPPORT')
       ]
@@ -34,13 +36,13 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**𝑯𝑬𝑳𝑷 𝑴𝑬𝑵𝑼 𝑶𝑭 𝑻𝑨𝑮𝑨𝑳𝑳𝑩𝑶𝑻**\n\n𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺 ☞︎︎︎ /all\n__You can use this command with text what you want to mention others.__\nExample: `/all Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [✨𝑹𝑶𝒀𝑨𝑳 𝑼𝑷𝑫𝑨𝑻𝑬𝑺✨](https://t.me/DARKAMANCHANNEL)"
+  helptext = "**💫𝑯𝑬𝑳𝑷 𝑴𝑬𝑵𝑼 𝑶𝑭 𝑻𝑨𝑮𝑨𝑳𝑳𝑩𝑶𝑻💫**\n\n𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺 ☞︎︎︎ /all\n__You can use this command with text what you want to mention others.__\nExample: `/all Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\n𝑭𝑶𝑳𝑳𝑶𝑾 [✨𝑹𝑶𝒀𝑨𝑳 𝑼𝑷𝑫𝑨𝑻𝑬𝑺✨](https://t.me/DARKAMANCHANNEL)"
   await event.reply(
     helptext,
     link_preview=False,
     buttons=(
       [
-        Button.url('🇸𝐔𝐏𝐏𝐎𝐑𝐓', 'https://t.me/JaiHindChatting'),
+        Button.url('🇸𝐔𝐏𝐏𝐎𝐑𝐓', 'https://t.me/DARKAMANSUPPORT'),
         Button.url('🇨𝐇𝐀𝐍𝐍𝐄𝐋', 'https://t.me/DARKAMANCHANNEL')
       ]
     )
