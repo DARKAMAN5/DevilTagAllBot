@@ -20,13 +20,14 @@ spam_chats = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
+  await event.reply_photo("https://te.legra.ph/file/8b7e7f7dc010c6967e3c1.jpg")
   await event.reply(
     "__**'✨ 𝐈 𝐀ᴍ 𝐓ᴀɢ 𝐀ʟʟ 𝐁ᴏᴛ,** 𝐈 𝐂ᴀɴ 𝐌ᴇɴᴛɪᴏɴ 𝐀ʟʟ 𝐌ᴇᴍʙᴇʀs 𝐈ɴ 𝐆ʀᴏᴜᴘ\n💫𝐂ʟɪᴄᴋ **/help** 𝐅ᴏʀ 𝐌ᴏʀᴇ 𝐈ɴғᴏʀᴍᴀᴛɪᴏɴ💫__\n\n🇮🇳 𝐉ᴏɪɴ ☞︎︎︎ [✨𝑹𝑶𝒀𝑨𝑳 𝑺𝑼𝑷𝑷𝑶𝑹𝑻✨](https://t.me/DARKAMANSUPPORT)",
     link_preview=False,
     buttons=(
       [
         Button.url('🇦𝐃𝐃 𝐌𝐄𝐍𝐓𝐈𝐎𝐍 𝐁𝐎𝐓', 'https://t.me/MENTIONXROBOT?startgroup=true'),
-      ]
+      ],
       [
         Button.url('🇨𝐇𝐀𝐍𝐍𝐄𝐋', 'https://t.me/DARKAMANCHANNEL'),
         Button.url('🇸𝐔𝐏𝐏𝐎𝐑𝐓', 'https://t.me/DARKAMANSUPPORT')
@@ -48,7 +49,7 @@ async def help(event):
     )
   )
   
-@client.on(events.NewMessage(pattern="^/all|/tagall|@all ?(.*)"))
+@client.on(events.NewMessage(pattern="^/all /tagall @all ?(.*)"))
 async def all(event):
   chat_id = event.chat_id
   if event.is_private:
@@ -87,7 +88,7 @@ async def all(event):
     if msg == None:
         return await event.respond("__I Can't Mention Members For Older Messages! (messages which are sent before I'm added to group)__")
   else:
-    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nJoin @DARKAMANCHANNEL !__")
+    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nUpdates Channel @DARKAMANCHANNEL !__")
   
   spam_chats.append(chat_id)
   usrnum = 0
