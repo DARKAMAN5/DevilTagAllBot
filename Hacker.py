@@ -48,11 +48,11 @@ async def help(event):
     )
   )
   
-@client.on(events.NewMessage(pattern="^/all ?(.*)"))
+@client.on(events.NewMessage(pattern="^/all|/tagall|@all ?(.*)"))
 async def all(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("__This command Can Be Use In Groups And Channels @JaiHindChatting !__")
+    return await event.respond("__This command Can Be Use In Groups And Channels @DARKAMANCHANNEL !__")
   
   is_admin = False
   try:
@@ -74,7 +74,7 @@ async def all(event):
     ):
       is_admin = True
   if not is_admin:
-    return await event.respond("__Only Admins Can Mention All\n\nFor More Go On @JaiHindChatting !__")
+    return await event.respond("__Only Admins Can Mention All\n\nFor More Go On @DARKAMANSUPPORT !__")
   
   if event.pattern_match.group(1) and event.is_reply:
     return await event.respond("__Give me one argument!__")
@@ -87,7 +87,7 @@ async def all(event):
     if msg == None:
         return await event.respond("__I Can't Mention Members For Older Messages! (messages which are sent before I'm added to group)__")
   else:
-    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nMade bY @JaiHindChatting !__")
+    return await event.respond("__Reply To a Message Or Give Me Some Text To Mention Others\n\nJoin @DARKAMANCHANNEL !__")
   
   spam_chats.append(chat_id)
   usrnum = 0
@@ -99,7 +99,7 @@ async def all(event):
     usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
     if usrnum == 5:
       if mode == "text_on_cmd":
-        txt = f"{usrtxt}\n\n{msg}\n\nMade bY @JaiHindChatting ✌️🔥"
+        txt = f"{usrtxt}\n\n{msg}\n\nBOTS SUPPORT @DARKAMANSUPPORT ✌️🔥"
         await client.send_message(chat_id, txt)
       elif mode == "text_on_reply":
         await msg.reply(usrtxt)
@@ -114,7 +114,7 @@ async def all(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
-    return await event.respond('__There Is No Proccess On Going @JaiHindChatting...__')
+    return await event.respond('__There Is No Proccess On Going @DARKAMANCHANNEL...__')
   else:
     try:
       spam_chats.remove(event.chat_id)
@@ -122,5 +122,5 @@ async def cancel_spam(event):
       pass
     return await event.respond('__Stopped.__')
 
-print(">> HACKER TAGALL STARTED @JaiHindChatting<<")
+print(">> MENTION X ROBOT STARTED @DARKAMANCHANNEL<<")
 client.run_until_disconnected()
