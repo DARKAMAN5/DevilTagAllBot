@@ -36,7 +36,7 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**💫𝑯𝑬𝑳𝑷 𝑴𝑬𝑵𝑼 𝑶𝑭 𝑻𝑨𝑮𝑨𝑳𝑳𝑩𝑶𝑻💫**\n\n𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺 ☞︎︎︎ /all\n__You can use this command with text what you want to mention others.__\nExample: `/all Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\n𝑭𝑶𝑳𝑳𝑶𝑾 [✨𝑹𝑶𝒀𝑨𝑳 𝑼𝑷𝑫𝑨𝑻𝑬𝑺✨](https://t.me/DARKAMANCHANNEL)"
+  helptext = "**💫𝑯𝑬𝑳𝑷 𝑴𝑬𝑵𝑼 𝑶𝑭 𝑻𝑨𝑮𝑨𝑳𝑳𝑩𝑶𝑻💫**\n\n𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺 ☞︎︎︎ /all /tagall @all\n__You can use this command with text what you want to mention others.__\nExample: `/all Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\n𝑭𝑶𝑳𝑳𝑶𝑾 [✨𝑹𝑶𝒀𝑨𝑳 𝑼𝑷𝑫𝑨𝑻𝑬𝑺✨](https://t.me/DARKAMANCHANNEL)"
   await event.reply(
     helptext,
     link_preview=False,
@@ -48,7 +48,7 @@ async def help(event):
     )
   )
   
-@client.on(events.NewMessage(pattern="^/all /tagall @all ?(.*)"))
+@client.on(events.NewMessage(pattern="^/all?|/tagall?|@all?(.*)"))
 async def all(event):
   chat_id = event.chat_id
   if event.is_private:
