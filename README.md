@@ -25,3 +25,11 @@ API_ID :- GET IT FROM MY.TELEGRAM.ORG
 API_HASH :- GET IT FROM MY.TELEGRAM.ORG
 TOKEN :- GET IT FROM @BOTFATHER
 ```
+
+
+
+
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DARKAMAN5/Deploy-X)
+
+
