@@ -30,6 +30,5 @@ TOKEN :- GET IT FROM @BOTFATHER
 
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DARKAMAN5/Deploy-X)
 
 
